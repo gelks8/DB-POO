@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<passageiros>
+	<passageiro>
+		<nome>Gerson</nome>
+		<idade>27</idade>
+		<ticket>0001</ticket>
+		<origem>Campina Grande - PB</origem>
+		<destino>João Pessoa - PB</destino>
+	</passageiro>
+	<passageiro>
+		<nome>Karol</nome>
+		<idade>25</idade>
+		<ticket>0002</ticket>
+		<origem>Campina Grande - PB</origem>
+		<destino>Patos - PB</destino>
+	</passageiro>
+	<passageiro>
+		<nome>Gabriel</nome>
+		<idade>17</idade>
+		<ticket>0003</ticket>
+		<origem>Campina Grande - PB</origem>
+		<destino>Recife - PE</destino>
+	</passageiro>
+	<passageiro>
+		<nome>Maria</nome>
+		<idade>21</idade>
+		<ticket>0004</ticket>
+		<origem>Campina Grande - PB</origem>
+		<destino>Sousa - PB</destino>
+	</passageiro>
+	<passageiro>
+		<nome>Paula</nome>
+		<idade>24</idade>
+		<ticket>0005</ticket>
+		<origem>Campina Grande - PB</origem>
+		<destino>Salvador - BA</destino>
+	</passageiro>
+</passageiros>
