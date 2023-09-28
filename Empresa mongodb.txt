@@ -1,0 +1,101 @@
+1) 
+
+> use Empresa
+
+2 e 3)
+
+Empresa > db.Pessoa.insertMany(
+[
+	{"_id": 1, "nome": "Antunes", "idade": 25, "cargo": "Assistente", "cidade": "Campina Grande"},
+	{"_id": 2, "nome": "Bia", "idade": 33, "cargo": "Gerente", "cidade": "Campina Grande"},
+	{"_id": 3, "nome": "Carla", "idade": 32, "cargo": "Operador", "cidade": "Campina Grande"},
+	{"_id": 4, "nome": "Daniel", "idade": 28, "cargo": "Caixa", "cidade": "Campina Grande"},
+	{"_id": 5, "nome": "Erivan", "idade": 27, "cargo": "Caixa", "cidade": "Campina Grande"},
+	{"_id": 6, "nome": "Fabiana", "idade": 21, "cargo": "Estagiaria", "cidade": "Campina Grande"},
+	{"_id": 7, "nome": "Gerson", "idade": 28, "cargo": "Operador", "cidade": "Campina Grande"},
+	{"_id": 8, "nome": "Henrique", "idade": 27, "cargo": "Operador", "cidade": "Campina Grande"},
+	{"_id": 9, "nome": "Ivna", "idade": 29, "cargo": "Operador", "cidade": "Campina Grande"},
+	{"_id": 10, "nome": "Joana", "idade": 31, "cargo": "Caixa", "cidade": "Campina Grande"},
+]
+)
+
+4)
+
+Empresa > db.Pessoa.updateMany(
+  { _id: { $in: [1, 2] } },
+  {
+    $set: {
+      nome: { $concat: ["$nome", " Silva"] },
+      cidade: "Campina Grande - PB"
+    }
+  }
+)
+
+5)
+
+Empresa > db.Pessoa.find(
+  { idade: { $gt: 25 } }, 
+  { _id: 0 }
+)
+
+6)
+
+Empresa >db.Pessoa.aggregate([
+  {
+    $group: {
+      _id: "$cidade",
+      mediaIdade: { $avg: "$idade" }
+    }
+  }
+])
+
+7)
+
+Empresa > db.Setor.insertMany(
+[
+	{"_id": 21, "sigla": "A", "descricao": "Operacional", "salario": 1500},
+	{"_id": 22, "sigla": "B", "descricao": "Gerencial", "salario": 3300},
+	{"_id": 23, "sigla": "C", "descricao": "Atendimento", "salario": 1650},
+	{"_id": 24, "sigla": "D", "descricao": "Atendimento", "salario": 1650},
+]
+)
+
+8)
+db.Setor.aggregate([
+  {
+		$group: {
+			_id: "$sigla",
+			salarioMax: {$max: "$salario"}
+		}
+	},
+  {
+		$sort: {salarioMax: -1}
+	},
+  {
+		$limit: 1
+	}
+])
+9)
+db.Setor.aggregate([
+  {
+		$group: {
+			_id: "$sigla",
+			salarioMin: {min: "$salario"}
+		}
+	},
+  {
+		$sort: {salarioMin: -1}
+	},
+  {
+		$limit: 1
+	}
+])
+10)
+db.Setor.aggregate([
+  {
+		$group: {
+			_id: null,
+			salarioMed: {$avg: "$salario"}
+		}
+	}
+])

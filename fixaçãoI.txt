@@ -1,0 +1,169 @@
+1 - Entendo que persistencia de dados é a forma de guardar dados de alguma forma. Ou sando documentos simples ou banco de dados.
+
+2 - De maneira simples o objeto transientes são objetos que não ficam salvos, são temporarios. Ja os persistentes ficam salvos e sao usados para armazenamento de dados.
+
+3 - O relacional é usado para guardar dados, ja a orientada a objeto serve tanto para guardar dados quanto metodos que podem ser acessados a partir de de linguagem de programação orientada a objeto.
+
+4 - Tem objetivo de simplificar o desenvolvimento de apps que possui interação com banco de dados relacional, reduzindo a complexidade de trabalhar diretamento com o banco de dados.
+
+5- a) Dados estruturados são tipos de dados organizados de forma sistemática e previsível.
+   b) Dados semiestruturados não seguem um esquema de dados rígido como os dados estruturados, mas têm alguma estrutura ou organização
+   c) Dados não estruturados que não se encaixam em um modelo de dados tabular ou hierárquico e não têm esquema formal
+
+6- A beautiful soup que permite que busquem e manipulem facilmente os elementos e os dados presentes nesse tipo de doc
+
+7-  a) <?xml version="1.0" encoding="UTF-8"?>
+    b) São organizados em formato hierárquico.
+    c) Pode ser organizado em texto puro, de arvore, no estilo JSON, objetos entre outros e cada um pode ser adequado ao que o dev precisa.
+
+8 - 
+
+<?xml version="1.0" encoding="UTF-8"?>
+<produtos>
+    <!-- Produtos de Comércio Eletrônico -->
+    <produto>
+        <categoria>Comércio Eletrônico</categoria>
+        <nome>Smartphone Nokia</nome>
+        <caracteristicas>
+            <caracteristica>Tela de 6 polegadas</caracteristica>
+            <caracteristica>Processador Octa-Core</caracteristica>
+            <caracteristica>Memória RAM de 4GB</caracteristica>
+            <caracteristica>Armazenamento de 64GB</caracteristica>
+            <caracteristica>Câmera principal de 12MP</caracteristica>
+        </caracteristicas>
+    </produto>
+    <produto>
+        <categoria>Comércio Eletrônico</categoria>
+        <nome>Notebook Lenovo</nome>
+        <caracteristicas>
+            <caracteristica>Tela de 15.6 polegadas</caracteristica>
+            <caracteristica>Processador Intel Core i5</caracteristica>
+            <caracteristica>Memória RAM de 8GB</caracteristica>
+            <caracteristica>Armazenamento SSD de 256GB</caracteristica>
+            <caracteristica>Placa de vídeo dedicada NVIDIA GeForce</caracteristica>
+        </caracteristicas>
+    </produto>
+
+    <!-- Produtos de Móveis -->
+    <produto>
+        <categoria>Móveis</categoria>
+        <nome>Sofá de Couro</nome>
+        <caracteristicas>
+            <caracteristica>Cor Marrom</caracteristica>
+            <caracteristica>3 Lugares</caracteristica>
+            <caracteristica>Estrutura de madeira resistente</caracteristica>
+            <caracteristica>Estofamento confortável</caracteristica>
+            <caracteristica>Design moderno</caracteristica>
+        </caracteristicas>
+    </produto>
+    <produto>
+        <categoria>Móveis</categoria>
+        <nome>Mesa de Jantar</nome>
+        <caracteristicas>
+            <caracteristica>Material: Madeira de Carvalho</caracteristica>
+            <caracteristica>Capacidade para 6 pessoas</caracteristica>
+            <caracteristica>Design elegante</caracteristica>
+            <caracteristica>Tampo de vidro temperado</caracteristica>
+            <caracteristica>Dimensões: 180cm x 90cm</caracteristica>
+        </caracteristicas>
+    </produto>
+
+    <!-- Produtos de Imóveis -->
+    <produto>
+        <categoria>Imóveis</categoria>
+        <nome>Apartamento no Centro</nome>
+        <caracteristicas>
+            <caracteristica>2 Quartos</caracteristica>
+            <caracteristica>1 Banheiro</caracteristica>
+            <caracteristica>Cozinha equipada</caracteristica>
+            <caracteristica>Varanda com vista panorâmica</caracteristica>
+            <caracteristica>Área de lazer com piscina</caracteristica>
+        </caracteristicas>
+    </produto>
+    <produto>
+        <categoria>Imóveis</categoria>
+        <nome>Casa no Subúrbio</nome>
+        <caracteristicas>
+            <caracteristica>3 Quartos</caracteristica>
+            <caracteristica>2 Banheiros</caracteristica>
+            <caracteristica>Ampla sala de estar</caracteristica>
+            <caracteristica>Garagem para 2 carros</caracteristica>
+            <caracteristica>Jardim espaçoso</caracteristica>
+        </caracteristicas>
+    </produto>
+
+    <!-- Produtos de Roupas -->
+    <produto>
+        <categoria>Roupas</categoria>
+        <nome>Camisa Polo</nome>
+        <caracteristicas>
+            <caracteristica>Cor: Azul Marinho</caracteristica>
+            <caracteristica>Tamanho: M</caracteristica>
+            <caracteristica>Tecido 100% algodão</caracteristica>
+            <caracteristica>Botões frontais</caracteristica>
+            <caracteristica>Logo bordado no peito</caracteristica>
+        </caracteristicas>
+    </produto>
+    <produto>
+        <categoria>Roupas</categoria>
+        <nome>Calça Jeans Skinny</nome>
+        <caracteristicas>
+            <caracteristica>Cor: Preta</caracteristica>
+            <caracteristica>Tamanho: 32</caracteristica>
+            <caracteristica>Tecido elástico</caracteristica>
+            <caracteristica>Estilo moderno</caracteristica>
+            <caracteristica>Bolsos funcionais</caracteristica>
+        </caracteristicas>
+    </produto>
+</produtos>
+
+9 - JSON é um formato de dados versatil, leve e amplamente adotao além de ser adequado para troca de dados entre sistemas.
+
+10 - O stringfy serve para transformar um objeto em uma string json. O parse é o contrario, transforma a stringjson em um objeto.
+
+11 -
+
+{
+    "servico": "Venda Online de Produtos Eletrônicos",
+    "descricao": "Uma plataforma de comércio eletrônico que oferece uma ampla variedade de produtos eletrônicos, incluindo smartphones, laptops, acessórios e mais.",
+    "fundacao": 2022,
+    "endereco": {
+        "rua": "Maestro Villa Lobos",
+        "cidade": "Campina Grande",
+        "estado": "Paraiba",
+        "cep": "58425-140"
+    },
+    "produtosPopulares": [
+        {
+            "nome": "Smartphone Nokia",
+            "preco": 799.99,
+            "estoque": 150
+        },
+        {
+            "nome": "Notebook Acer",
+            "preco": 1299.99,
+            "estoque": 75
+        }
+    ],
+    "avaliacoes": [
+        {
+            "usuario": "carloscastro89@gmail.com",
+            "classificacao": 4.5,
+            "comentario": "Excelente serviço, entrega rápida!"
+        },
+        {
+            "usuario": "deborasouza12@gmail.com",
+            "classificacao": 5.0,
+            "comentario": "Amo essa loja, sempre encontro o que preciso."
+        }
+    ]
+}
+
+12 - A facilidade de uso, eu particulamente acho mais facil trabalhar com JSON. A sintaxe dos dois tipos de documento sao diferente. 
+
+13 - JDBC serve para facilitar a conexao JAVA com o BD e permite que possamos trabalhar com o banco de dados a partir do JAVA.
+
+14 - Os principais sao os drivers e as interfaces de connection e statement
+
+15 - Na minha pesperctiva a maior restrição é a complexidadee no gerenciamento.
+
